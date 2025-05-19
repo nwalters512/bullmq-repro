@@ -1,6 +1,6 @@
 # bullmq-repro
 
-Reproduction of an issue with BullMQ's job schedulers
+Reproduction of an issue with BullMQ's job schedulers that was reported here: https://github.com/taskforcesh/bullmq/issues/3272
 
 ## Steps to reproduce
 
