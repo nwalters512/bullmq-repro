@@ -1,0 +1,9 @@
+{
+  "name": "bullmq-repro",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "bullmq": "^5.52.3",
+    "ioredis": "^5.6.1"
+  }
+}
