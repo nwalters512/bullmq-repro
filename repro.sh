@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DELAY_MS=100
-MAX_INSTANCES=4
+MAX_INSTANCES=1
 
 # Array to store PIDs of the started processes
 PIDS=()
@@ -12,7 +12,7 @@ cleanup() {
   for pid in "${PIDS[@]}"; do
     if ps -p "$pid" > /dev/null; then
       echo "Killing process $pid"
-      kill "$pid"
+      kill -SIGTERM "$pid"
     fi
   done
   # Wait for a moment to allow processes to terminate

@@ -23,10 +23,16 @@ cronQueue.upsertJobScheduler(
 );
 console.log('Scheduler created');
 
-new Worker(
+const worker = new Worker(
   'prairietest-cron',
   async (job) => {
     console.log(`Processing job ${job.id} of type ${job.name}`);
   },
   { connection: redis },
 );
+
+process.on('SIGTERM', async () => {
+  await worker.close();
+  await cronQueue.close();
+  process.exit(0);
+})
