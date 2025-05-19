@@ -4,6 +4,8 @@ Reproduction of an issue with BullMQ's job schedulers
 
 ## Steps to reproduce
 
+Ensure redis is installed and running on `localhost:6379`.
+
 Install necessary dependencies:
 
 ```bash
