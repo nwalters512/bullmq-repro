@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DELAY_MS=100
-MAX_INSTANCES=1
+MAX_INSTANCES=4
 
 # Array to store PIDs of the started processes
 PIDS=()
